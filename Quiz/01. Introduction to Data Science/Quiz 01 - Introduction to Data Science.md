@@ -1,6 +1,6 @@
 ---
 sources:
-  - "[[01.1. Data Science Foundations and CRISP-DM Workflow]]"
+  - "[[01.1. Data Science Foundations and the 8-Step Data Science Workflow]]"
   - "[[01.2. The Modern Data Ecosystem and Professional Roles]]"
   - "[[01.3. Setting Up the Professional Python and Data Science Environment]]"
   - "[[01.4. Tutorial 02 - Hospital Patient Cohort Initialization and Environment Audit]]"
@@ -9,19 +9,19 @@ sources:
 >> [!success]- Answer
 >> True
 
-> [!question] The Cross-Industry Standard Process for Data Mining (CRISP-DM) prescribes a strictly linear sequence of stages, where each stage is completed exactly once per project.
+> [!question] The 8-step Data Science Workflow prescribes a strictly linear sequence of stages, where each stage is completed exactly once per project.
 >> [!success]- Answer
 >> False
 
-> [!question] In the CRISP-DM lifecycle, imputing null values and removing duplicate records take place during the Modeling stage.
+> [!question] In the Data Science Workflow, imputing null values and removing duplicate records take place during the Modeling stage.
 >> [!success]- Answer
 >> False
 
-> [!question] The Evaluation stage of CRISP-DM assesses model predictions against unseen validation sets using domain-specific metrics such as AUC-ROC, F1-Score, and RMSE.
+> [!question] The Evaluation stage of the Data Science Workflow assesses model predictions against unseen validation sets using domain-specific metrics such as AUC-ROC, F1-Score, and RMSE.
 >> [!success]- Answer
 >> True
 
-> [!question] In the CRISP-DM lifecycle, when the Monitoring stage detects concept drift in a deployed model, the process loops back to Problem Definition.
+> [!question] In the Data Science Workflow, when the Monitoring stage detects concept drift in a deployed model, the process loops back to Problem Definition.
 >> [!success]- Answer
 >> True
 
@@ -45,7 +45,7 @@ sources:
 >> [!success]- Answer
 >> False
 
-> [!question] In the CRISP-DM lifecycle, which stage immediately follows Data Collection?
+> [!question] In the Data Science Workflow, which stage immediately follows Data Collection?
 > a) Exploratory Data Analysis
 > b) Data Cleaning and Preparation
 > c) Problem Definition
@@ -53,15 +53,15 @@ sources:
 >> [!success]- Answer
 >> b) Data Cleaning and Preparation
 
-> [!question] According to the CRISP-DM lifecycle, what happens during the Deployment stage?
+> [!question] According to the Data Science Workflow, what happens during the Deployment stage?
 > a) Live inference pipelines are audited for data drift and latency regressions
 > b) Generalized predictions are assessed against unseen validation sets
-> c) Model artifacts are containerized into production microservices exposed via REST endpoints
+> c) The validated model is put into production so its predictions reach decision-makers
 > d) Ambiguous operational challenges are translated into measurable objectives
 >> [!success]- Answer
->> c) Model artifacts are containerized into production microservices exposed via REST endpoints
+>> c) The validated model is put into production so its predictions reach decision-makers
 
-> [!question] Which activities characterize the Exploratory Data Analysis stage of the CRISP-DM lifecycle?
+> [!question] Which activities characterize the Exploratory Data Analysis stage of the Data Science Workflow?
 > a) Imputing null values and removing duplicate records
 > b) Containerizing model artifacts with Docker
 > c) Auditing live pipelines for concept drift
@@ -125,7 +125,7 @@ sources:
 >> [!success]- Answer
 >> d) 45.7 years and 220 mg/dL
 
-> [!question] Match the CRISP-DM stage with its primary activity.
+> [!question] Match the Data Science Workflow stage with its primary activity.
 >> [!example] Group A
 >> a) Problem Definition
 >> b) Data Collection
