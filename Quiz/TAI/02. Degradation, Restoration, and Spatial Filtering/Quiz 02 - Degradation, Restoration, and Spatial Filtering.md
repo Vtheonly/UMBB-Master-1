@@ -235,7 +235,7 @@ sources:
 >> n) The mean intensity of the winning sub-region is assigned to the center pixel.
 >> o) Evaluated per sector as the average of the squared intensities minus the squared mean.
 >> p) Measures local intensity dispersion, and is large when a sub-region straddles an edge.
->> q) Nine overlapping sectors inside a $5 \times 5$ window: one central cross, four cardinal directions, and four diagonal corners.
+>> q) Nine overlapping sectors inside a $5 \times 5$ window: one central 3x3 square, four cardinal directions, and four diagonal corners.
 >
 >> [!success]- Answer
 >> a) -> q)
