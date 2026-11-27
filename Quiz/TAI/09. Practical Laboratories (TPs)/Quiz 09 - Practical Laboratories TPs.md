@@ -29,7 +29,7 @@ sources:
 >> [!success]- Answer
 >> False
 
-> [!question] In `fast_box_filter_integral`, once the summed-area table is built, every window sum costs four array lookups regardless of the kernel size.
+> [!question] In `filtreMoyenne_integrale`, once the summed-area table is built, every window sum costs four array lookups regardless of the kernel size.
 >> [!success]- Answer
 >> True
 
@@ -81,7 +81,7 @@ sources:
 >> [!success]- Answer
 >> c) 0, the pepper value.
 
-> [!question] Which NumPy expression builds the integral image (summed-area table) inside `fast_box_filter_integral`?
+> [!question] Which NumPy expression builds the integral image (summed-area table) inside `filtreMoyenne_integrale`?
 > a) `np.sum(padded, axis=(0, 1))`
 > b) `np.add.reduce(padded, axis=1)`
 > c) `np.gradient(padded, axis=0)`
