@@ -13,7 +13,7 @@ sources:
 >> [!success]- Answer
 >> True
 
-> [!question] In the lab's `manual_threshold` implementation, a pixel whose gray intensity is exactly equal to the threshold value is assigned 255.
+> [!question] In the lab's `seuillage_fixe_perso` implementation, a pixel whose gray intensity is exactly equal to the threshold value is assigned 255.
 >> [!success]- Answer
 >> False
 
