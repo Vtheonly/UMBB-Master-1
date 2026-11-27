@@ -45,9 +45,9 @@ sources:
 >> [!success]- Answer
 >> True
 
-> [!question] In `contour_stencil_2x`, the shared edge midpoints are interpolated before the low-resolution pixels are copied onto the even coordinates.
+> [!question] In `super_resolution_contour_stencils_2x`, the shared edge midpoints are produced by averaging the values that adjacent cells assign to the same mid-point, after the per-cell rule groups have run.
 >> [!success]- Answer
->> False
+>> True
 
 > [!question] What does `cv2.imread()` do when the image file cannot be found or read?
 > a) It raises a FileNotFoundError exception automatically.
@@ -121,13 +121,13 @@ sources:
 >> [!success]- Answer
 >> a) The L luminance channel only, leaving a and b untouched.
 
-> [!question] For a 256x256 low-resolution input, `contour_stencil_2x` returns an image of what size?
-> a) 512x512, exactly doubled in each dimension.
+> [!question] For a 256x256 low-resolution input, `super_resolution_contour_stencils_2x` returns an image of what size?
+> a) 512x512, exactly doubled in each dimension — the lab returns (2h, 2w) with an extrapolated rim; (2h-1, 2w-1) belongs only to the simplified centre-rule reduction.
 > b) 511x511, following the 2h-1 by 2w-1 output formula.
 > c) 255x255, one pixel short in each dimension.
 > d) 1024x1024, doubled twice.
 >> [!success]- Answer
->> b) 511x511, following the 2h-1 by 2w-1 output formula.
+>> a) 512x512, exactly doubled in each dimension — the lab returns (2h, 2w) with an extrapolated rim; (2h-1, 2w-1) belongs only to the simplified centre-rule reduction.
 
 > [!question] Match each element of the TP1 thresholding lab with its role.
 >> [!example] Group A
@@ -290,24 +290,24 @@ sources:
 >> c) -> n)
 >> d) -> o)
 
-> [!question] Match the step of `contour_stencil_2x` with what it does.
+> [!question] Match the stage of `super_resolution_contour_stencils_2x` with what it does.
 >> [!example] Group A
->> a) `out[2 * y, 2 * x] = im[y, x]`
->> b) The cell-center value when one variation is strictly smaller
->> c) The cell-center value when both variations are equal
->> d) The shared edge midpoint updates
+>> a) `out[0:2*h:2, 0:2*w:2] = image`
+>> b) The 12 weighted total-variation maps smoothed by `G_rho`
+>> c) `np.argmin(tv_maps, axis=0)`
+>> d) The rule groups A-D over the cell corners
 >
 >> [!example] Group B
->> n) Takes one quarter of the sum of the four surrounding corners.
->> o) Averages the two pixels at the ends of the favored diagonal.
->> p) Averages the values directly above and below, or left and right.
->> q) Seats each original sample on every other row and column of the output.
+>> n) Fill the mid-points N/S/W/E and centre X according to the winning stencil's orientation.
+>> o) Seat each original sample on every other row and column of the output grid.
+>> p) Select, for every LR cell, the stencil whose estimated TV is smallest.
+>> q) Compare the candidate edge orientations before any interpolation happens.
 >
 >> [!success]- Answer
->> a) -> q)
->> b) -> o)
->> c) -> n)
->> d) -> p)
+>> a) -> o)
+>> b) -> q)
+>> c) -> p)
+>> d) -> n)
 
 > [!question] Match the 2x upsampling method from the super-resolution benchmark with its observed behavior.
 >> [!example] Group A

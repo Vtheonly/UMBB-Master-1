@@ -285,7 +285,7 @@ sources:
 >> n) Family of twelve candidate geometric configurations encoding eight discretized contour orientations.
 >> o) Sub-pixel points shared between adjacent cells, each obtained by averaging the two bordering values.
 >> p) Quantity that approaches zero when a candidate path runs along a nearly constant image contour.
->> q) Lattice of size $2H - 1$ by $2W - 1$ that receives the known samples at even coordinates.
+>> q) Lattice of size $2H$ by $2W$ that receives the known samples at even coordinates, the interpolants at odd coordinates, and an extrapolated rim.
 >
 >> [!success]- Answer
 >> a) -> p)
