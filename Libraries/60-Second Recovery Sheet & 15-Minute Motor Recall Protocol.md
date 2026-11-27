@@ -54,7 +54,7 @@
 2. **During the exam:** consult the paper, not your memory — the dump frees working memory for the actual problem.
 3. **After the exam (motor recall drills):** the block is the reference key for the 15-minute protocol below.
 
-Cross-references: the full invariant derivations live in `Computer Vision.md` Sections 1-2; each numbered family expands into its companion note (`01.5`-`26.5` in `Libraries/`).
+Cross-references: the full invariant derivations live in `Computer Vision.md` Sections 1-2; each numbered family expands into its companion note (`00.5`-`26.5` in `Libraries/`; the series opens with core Python in [[00.5. Core Python Handwritten Construction Guide]]).
 
 ---
 
