@@ -54,7 +54,7 @@
 2. **During the exam:** consult the paper, not your memory — the dump frees working memory for the actual problem.
 3. **After the exam (motor recall drills):** the block is the reference key for the 15-minute protocol below.
 
-Cross-references: the full invariant derivations live in `Computer Vision.md` Sections 1-2; each numbered family expands into its companion note (`00.5`-`26.5` in `Libraries/`; the series opens with core Python in [[00.5. Core Python Handwritten Construction Guide]]).
+Cross-references: each numbered family expands into its companion note (`00.5`-`26.5` in `Libraries/`; the series opens with core Python in [[00.5. Core Python Handwritten Construction Guide]]) and into the parent library notes — the derivations live there, e.g. the sandwich in [[19.5. Spatial Restoration, Integral Fast Filtering & Noise Generators]], coordinates in [[15.5. OpenCV Matrix Topology, Saturated Math & BGR Conventions]].
 
 ---
 
@@ -83,8 +83,10 @@ def add_gaussian_noise(img, var=100.0):
     return np.clip(img.astype(np.float64) + noise, 0, 255).astype(np.uint8)
 
 def add_salt_pepper(img, p=0.10):
-    noisy = img.copy(); rnd = np.random.rand(*img.shape[:2])
-    noisy[rnd < p / 2] = 255; noisy[rnd > 1 - p / 2] = 0
+    noisy = img.copy()
+    rnd = np.random.rand(*img.shape[:2])
+    noisy[rnd < p / 2] = 255
+    noisy[rnd > 1 - p / 2] = 0
     return noisy
 ```
 
@@ -130,7 +132,7 @@ def psnr(a, b, R=255.0):
 ```
 
 ## Step 3 - Red-pen comparison (4 minutes)
-Open `Computer Vision.md` (Sections 6 and 7) and the companion notes. Compare your sheet line by line, character by character. Circle every deviation: float indices from a single `/`, missing tuple brackets, wrong ksize dialect (median int vs. blur tuple), forgotten `.astype`, `^` instead of `**`, `log` instead of `log10`, unpacking failures.
+Open the parent library notes ([[19. Spatial Image Restoration - Noise Models, Linear Convolution, and Fast Integral Filters|19]], [[22. Objective Image Quality Assessment - MSE, PSNR, and SSIM Metrics|22]]) and the companion notes. Compare your sheet line by line, character by character. Circle every deviation: float indices from a single `/`, missing tuple brackets, wrong ksize dialect (median int vs. blur tuple), forgotten `.astype`, `^` instead of `**`, `log` instead of `log10`, unpacking failures.
 
 ## Step 4 - Immediate triple rewrite (2 minutes)
 Rewrite each flawed line correctly THREE consecutive times. Motor memory consolidates through corrected repetition, not through re-reading.
